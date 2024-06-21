@@ -15,6 +15,10 @@ def cluster():
         return jsonify({'clusters': labels})
     except Exception as e:
         return jsonify({'error': str(e)})
+
+@app.route('/cluster',methods=['GET'])
+def check():
+    return jsonify({'status':'OK'})
     
     
 if __name__ == '__main__':
