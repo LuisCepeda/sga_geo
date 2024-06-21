@@ -3,7 +3,8 @@ from clustering import perform_clustering
 app = Flask(__name__)
 
 @app.route('/cluster', methods=['POST'])
-def cluster():    
+def cluster(): 
+    print('Calculando')
     try:
         data = request.json['data']
         eps = request.json.get('eps', 0.01)  # Ajustar el parámetro eps
